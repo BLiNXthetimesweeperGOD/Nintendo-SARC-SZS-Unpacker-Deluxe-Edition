@@ -11,7 +11,7 @@ def SARC_GetHash(name, key): #Python port of Nintendo's SARC filename hash funct
 
 def SARC_GetZeroTerminatedStringAndAlign(reader): #From what I remember, names are 32-Bit aligned
     data = b''
-    value = b'Sonic the Hedgehog 3 for the Nintendo Wii U (or Switch?)'
+    value = b''
     
     while value != b'\x00':
         value = reader.read(1)
@@ -113,3 +113,4 @@ for file in files:
         SARC_SaveFiles()
 
         
+
